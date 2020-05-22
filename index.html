@@ -86,8 +86,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##第一章</p>
-<p>内容</p>
+        <p>##第一章 hexo部署自己的博客</p>
+<p>#安装Nodejs（直接上官网下载）</p>
+<p>#安装Git（可以在<a href="https://npm.taobao.org/mirrors下载，速度较快）" target="_blank" rel="noopener">https://npm.taobao.org/mirrors下载，速度较快）</a></p>
+<p>#指令顺序</p>
+<p>node -v #查看node版本<br>npm -v #查看npm版本<br>npm install -g cnpm –registry=<a href="http://registry.npm.taobao.org" target="_blank" rel="noopener">http://registry.npm.taobao.org</a> #安装淘宝的cnpm 管理器<br>cnpm -v #查看cnpm版本<br>cnpm install -g hexo-cli #安装hexo框架<br>hexo -v #查看hexo版本<br>mkdir blog #创建blog目录<br>cd blog #进入blog目录<br>sudo hexo init #生成博客 初始化博客（windows下不需要sudo命令）<br>hexo s #启动本地博客服务（可以用于本地预览）<br><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> #本地访问地址<br>hexo n “我的第一篇博客文章” #创建新的文章</p>
+<p>#vim的指令</p>
+<p>这里可以使用vim编辑一下md文件，注意vim基本命令：</p>
+<p>Esc/i  –可以退出插入模式，进入浏览模式</p>
+<p>i –进入插入模式</p>
+<p>浏览模式下—</p>
+<p>:q  –退出</p>
+<p>:wq –保存并退出</p>
+<p>:q! –强制退出</p>
+<p>:wq! –强制保存并退出</p>
+<p>–注意：在vim编辑时，如果没有正确保存再退出，将会遗留.wps临时文件，在hexo执行时会报错–</p>
+<p>#重新启动<br>hexo clean #清理之前生成的静态博客文件<br>hexo g #生成<br>#Github创建一个新的仓库 hanlei90.github.io（注意：这里网址不能用大写，否则可能造成无法访问该网址）<br>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件<br>-—<br>#配置_config.yml<br>-—-<br># Deployment<br>## Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a><br>deploy:<br>type: git<br>repo: <a href="https://github.com/hanlei90/hanlei90.github.io.git" target="_blank" rel="noopener">https://github.com/hanlei90/hanlei90.github.io.git</a><br>branch: master<br>-—-<br>hexo d #部署到Github仓库里<br><a href="https://hanlei90.github.io/" target="_blank" rel="noopener">https://hanlei90.github.io/</a> #访问这个地址可以查看博客</p>
+<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia #下载yilia主题到本地</p>
+<p>#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
+<p>hexo c #清理一下<br>hexo g #生成<br>hexo d #部署到远程Github仓库<br><a href="https://YourGithubName.github.io/" target="_blank" rel="noopener">https://YourGithubName.github.io/</a></p>
 <hr>
 <p>##第二章</p>
 <p>内容</p>
@@ -97,7 +114,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckahv2uo70000nkwu680qao31" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/22/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" data-id="ckahxffb80001wcwug03nb10g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,7 +163,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/22/hello-world/" data-id="ckahv2uon0001nkwu0lgz1ovf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/22/hello-world/" data-id="ckahxffay0000wcwu2tih842u" class="article-share-link">Share</a>
       
       
     </footer>
